@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+ -docker
+
+ before_install:
+    -docker build -f -t JavaTest Dockerfile.dev . 
+
+  script:
+
+    -docker run JavaTest nmp run test -- --coverage 
