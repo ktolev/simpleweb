@@ -4,7 +4,7 @@ services:
  -docker
 
  before_install:
-    -docker build -f -t JavaTest Dockerfile.dev . 
+    -docker build -t ktolev/simpleweb -f Dockerfile.dev . 
 
   script:
 
